@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo List</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -12,12 +14,13 @@
     <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
   </header>
 
-  <section>
-    <input type="text" id="texto-tarefa">
+  <section id="cria-tarefa-section">
+    <input type="text" placeholder="Digite aqui sua tarefa" id="texto-tarefa">
     <button id="criar-tarefa">Criar tarefa</button>
   </section>
 
   <main id="todo-content">
+    <h3>Tarefas</h3>
     <ol id="lista-tarefas"></ol>
   </main>
 
@@ -25,11 +28,13 @@
     <div id="funcoes-selecionado">
       <button id="mover-cima">Sobe</button>
       <button id="mover-baixo">Desce</button>
-      <button id="remover-selecionado">Apagar selecionado</button>
+      <button id="remover-selecionado" class="apaga">Apagar selecionado</button>
     </div>
-    <button id="salvar-tarefas">Salvar</button>
-    <button id="remover-finalizados">Apagar completos</button>
-    <button id="apaga-tudo">Apagar lista</button>
+    <div id="acoes-lista">
+      <button id="salvar-tarefas">Salvar</button>
+      <button id="remover-finalizados" class="apaga">Apagar ✔️</button>
+      <button id="apaga-tudo" class="apaga">Apagar lista toda</button>
+    </div>
   </section>
 
   <script src="script.js"></script>
