@@ -4,10 +4,11 @@ Realizado como um dos projetos finais do Bloco 5: JavaScript: DOM, Eventos e Web
 
 Além dos requisitos obrigatórios adicionei um estilo com CSS e algumas funcionalidades extras como a adição de item na lista de tarefas ao precionar enter.
 
-Resultado final.
+Resultado final do projeto todo-list:
 
+![Teste da aplicação](todo-list.gif)
 
-Você pode testar o projeto [aqui]().
+Você pode testar o projeto [aqui](https://saulokirchmaier.github.io/todo_list/).
 
 ## Funcionalidades.
 
@@ -17,6 +18,7 @@ Você pode testar o projeto [aqui]().
  - Marca itens como completos.
  - Remove os itens completos.
  - Salva a lista no localStorage.
+ - Restaura os itens do localStorage, com marcação de completo.
  - Apaga a lista toda.
 
 ## Requisitos Obrigatórios:
