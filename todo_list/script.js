@@ -17,7 +17,7 @@ function addTaskButton() {
   createTaskButton.addEventListener('click', function () {
     const taskTextInput = document.getElementById('texto-tarefa');
     const textTask = taskTextInput.value;
-    if (textTask) createNewElementList(textTask, '');
+    if (textTask) createNewElementList(taskTextInput.value, '');
     taskTextInput.value = '';
   });
 }
@@ -141,6 +141,7 @@ function upTaskPositionInList() {
     }
   });
 }
+
 // Desce a task na lista de tarefas
 // http://devfuria.com.br/javascript/dom-insert-before/
 // https://developer.mozilla.org/pt-BR/docs/Web/API/Node/insertBefore
@@ -164,6 +165,18 @@ function downTaskPositionInList() {
   });
 }
 
+// Enter para adicionar nova tarefa a lista
+function addNewTaskEnterPressed() {
+  const taskTextInput = document.querySelector('#texto-tarefa');
+
+  taskTextInput.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13 && taskTextInput.value) {
+      createNewElementList(taskTextInput.value, '');
+      taskTextInput.value = '';
+    }
+  });
+}
+
 window.onload = function () {
   addTaskButton();
   selectTaskItem();
@@ -175,4 +188,5 @@ window.onload = function () {
   removeSelectedTaskItem();
   upTaskPositionInList();
   downTaskPositionInList();
+  addNewTaskEnterPressed();
 };

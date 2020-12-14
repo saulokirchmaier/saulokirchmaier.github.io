@@ -25,9 +25,9 @@ header {
   background-color: #98d7e5;
   border-radius: 16px;
   margin: 0 auto;
-  padding-right: 20px;
+  padding: 4px 0 4px 20px;
   width: 60%;
-  min-height: 100px;
+  min-height: 98px;
 }
 
 .task {
@@ -44,7 +44,7 @@ header {
 
 #funcoes-selecionado {
   margin-top: 40px;
-  padding: 8px;
+  padding: 16px 8px 8px;
   margin: 0 auto;
   width: 50%;
 }
@@ -61,8 +61,8 @@ header {
 }
 
 .completed::after {
-  content: '✔️';
-
+  content: ' ✔';
+  color: #3d692c;
 }
 
 button {
