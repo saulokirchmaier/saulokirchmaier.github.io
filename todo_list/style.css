@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #f6f8fa;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+
+header {
+  background-color: #fb8570;
+  color: #343a40;
+  padding: 20px;
+}
+
+#cria-tarefa-section {
+  padding: 16px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#lista-tarefas {
+  background-color: #98d7e5;
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 4px 0 4px 20px;
+  width: 60%;
+  min-height: 98px;
+}
+
+.task {
+  border-bottom: solid 1px rgb(112, 191, 207);
+  padding: 4px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+
+.task:last-child {
+  border: 0;
+}
+
+#funcoes-selecionado {
+  margin-top: 40px;
+  padding: 16px 8px 8px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#acoes-lista {
+  padding: 8px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.selected {
+  background-color: #ffdb70;
+  border-radius: 4px;
+}
+
+.completed::after {
+  content: ' ✔';
+  color: #3d692c;
+}
+
+button {
+  background-color: rgb(72, 74, 179);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  height: 28px;
+  margin: 4px;
+  min-width: 80px;
+}
+
+#mover-cima, #mover-baixo {
+  background-color: #ffdb70;
+}
+
+.apaga {
+  background-color: #ff5a5f;
+}
+
+#salvar-tarefas, #criar-tarefa {
+  background-color: #96e278;
+}
