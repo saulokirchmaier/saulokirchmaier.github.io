@@ -60,9 +60,11 @@ window.onload = function () {
     colorPalette.addEventListener('click', function (event) {
       const lastSelected = document.querySelector('.selected');
       const newSelection = event.target;
-      lastSelected.classList.remove('selected');
-      newSelection.classList.add('selected');
-      selectedColor = newSelection.style.backgroundColor;
+      if (event.target.className === 'color') {
+        lastSelected.classList.remove('selected');
+        newSelection.classList.add('selected');
+        selectedColor = newSelection.style.backgroundColor;
+      }
     });
   }
 

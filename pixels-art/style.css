@@ -3,12 +3,32 @@
 }
 
 body {
-  padding: 12px;
   text-align: center;
+  background-color: #073B4C;
+  font-family: 'Press Start 2P', cursive;
+}
+
+header {
+  color: #073B4C;
+  background-color: #FFD166;
+  padding: 8px;
+}
+
+h1 {
+  padding: 8px;
+  font-size: 40px;
+  justify-content: center;
+}
+
+h2 {
+  color: #FFD166;
+  font-size: 25px;
+  padding-bottom: 8px;
 }
 
 #color-palette {
-  max-width: 600px;
+  padding: 16px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -37,13 +57,28 @@ button {
   margin: 10px 0;
 }
 
-#board-size {
+input {
   width: 150px;
 }
 
-.selected {
-  border: solid 3px ;
-  height: 55px;
-  margin: 2px;
-  width: 55px;
+.color.selected {
+  border: solid 3px #06D6A0;
+  height: 50px;
+  width: 50px;
+}
+
+#pixel-board {
+  margin: 8px 8px 50px;
+}
+
+footer {
+  bottom: 0;
+  background-color: #118AB2;
+  padding: 8px;
+  position: fixed;
+  width: 100%;
+}
+
+img {
+  height: 24px;
 }
