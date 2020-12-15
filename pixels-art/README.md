@@ -2,20 +2,23 @@
 
 Realizado como um dos projetos finais do Bloco 5: JavaScript: DOM, Eventos e Web Storage, para o curso de desenvolvimento Web na [Trybe](https://www.betrybe.com/).
 
+Além dos requisitos obrigatórios adicionei um estilo com CSS e algumas funcionalidades extras como adicionar novas cores, e gerar uma nova paleta de cores.
 
 Resultado final do projeto todo-list:
 
 ![Teste da aplicação]()
 
-Você pode testar o projeto [aqui](https://saulokirchmaier.github.io/).
+Você pode testar o projeto [aqui](https://saulokirchmaier.github.io/pixels-art).
 
 ## Funcionalidades.
 
- - Cria uma paleta de cores inicial com 4 cores.
+ - Cria uma paleta de cores inicial com 5 cores, sendo a primeira preta e a segunda branco.
  - Inicia a aplicação com um quadro de 5x5.
  - Ao clicar em uma cor da peleta de cores, a cor selecionada é escolhida para pintar o quadro.
  - Limpar todo o quadro.
  - Criar um quadro maior, de no máximo 50x50.
+ - Adicionar mais cores na peleta.
+ - Gerar novas cores na peleta
 
 ## Requisitos Obrigatórios:
 
