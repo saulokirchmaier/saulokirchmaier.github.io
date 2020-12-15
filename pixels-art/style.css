@@ -41,20 +41,20 @@ h2 {
 }
 
 .board-line {
-  height: 42px;
+  height: 32px;
   width: 100%;
 }
 
 .pixel {
   border: 1px solid black;
   display: inline-block;
-  height: 40px;
+  height: 30px;
   margin: 0;
-  width: 40px;
+  width: 30px;
 }
 
 button {
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 input {

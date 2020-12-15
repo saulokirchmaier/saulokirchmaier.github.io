@@ -142,6 +142,7 @@ window.onload = function () {
         if (nowPaletteQuantity.length === 0) {
           color.style.backgroundColor = 'rgb(0,0,0)';
           color.classList.add('selected');
+          selectedColor = 'rgb(0,0,0)';
         } else if (nowPaletteQuantity.length === 1) {
           color.style.backgroundColor = 'rgb(255,255,255)';
         } else color.style.backgroundColor = generateRandonColor();
@@ -153,13 +154,38 @@ window.onload = function () {
 
   // Gerar nova paleta de cores
   function newColorsPalette() {
-    const buttonGererateNewColors = document.getElementById('new-colors');
+    const paletteQauntity = document.querySelector('#palette-quantity');
+    if (paletteQauntity.value ) createColorsPalette(paletteQauntity.value);
+    paletteQauntity.value = '';
+  }
+  
+  function listenerNewColorsPalette() {
+    const buttonGererateNewColors = document.getElementById('add-colors');
+    const paletteQauntity = document.querySelector('#palette-quantity');
+
+    buttonGererateNewColors.addEventListener('click', newColorsPalette);
+    paletteQauntity.addEventListener('keyup', function(event) {
+      if (event.keyCode === 13 && paletteQauntity.value) {
+        newColorsPalette();
+      }
+    })
+  }
+
+  function destructColorsPalette() {
+    const palette = document.querySelector('#color-palette');
+    const paletteQauntity = document.querySelectorAll('.color');
+    for (let index = 0; index < paletteQauntity.length; index += 1) {
+      palette.removeChild(paletteQauntity[index]);
+    }
+  };
+
+  function generateNewColorsPalette() {
+    const newColors = document.querySelector('#new-colors');
     
-    buttonGererateNewColors.addEventListener('click', function() {
-      const paletteQauntity = document.querySelector('#palette-quantity');
-      const nowPaletteQuantity = document.querySelectorAll('.color');
-      if (paletteQauntity.value ) createColorsPalette(paletteQauntity.value);
-      paletteQauntity.value = '';
+    newColors.addEventListener('click', function() {
+      const paletteQauntity = document.querySelectorAll('.color');
+      destructColorsPalette();
+      createColorsPalette(paletteQauntity.length);
     });
   }
 
@@ -171,4 +197,6 @@ window.onload = function () {
   createColorsPalette(colorsPaletteQuantity);
   newColorsPalette();
   listenerBordGenerate();
+  listenerNewColorsPalette();
+  generateNewColorsPalette();
 };
