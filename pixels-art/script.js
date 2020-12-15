@@ -1,6 +1,6 @@
 window.onload = function () {
   let pixelsMatrix = 5;
-  let colorsPaletteQuantity = 4;
+  let colorsPaletteQuantity = 5;
   let boardLines;
   const colorPalette = document.getElementById('color-palette');
   const buttonClear = document.getElementById('clear-board');
@@ -102,18 +102,28 @@ window.onload = function () {
   }
 
   // Gera o board
-  function gererateBoardNxN() {
-    buttonGenerateBoard.addEventListener('click', function () {
+  function generateBoardNxN() {
       if (!boardSizeInput.value) alertEmptyInput();
       else {
         destructBoard();
         pixelsMatrix = checkSizeBoard(boardSizeInput.value);
         createBoard(pixelsMatrix);
       }
-    });
+      boardSizeInput.value = '';
   }
 
-  // Gera com randomica
+  function listenerBordGenerate() {    
+    buttonGenerateBoard.addEventListener('click', generateBoardNxN);
+    boardSizeInput.addEventListener('keyup', function(event) {
+      if (event.keyCode === 13 && boardSizeInput.value) {
+        generateBoardNxN();
+        boardSizeInput.value = '';
+      }
+    });
+
+  }
+
+  // Gera cor randomica
   // Fonte externa para a função https://css-tricks.com/snippets/javascript/random-hex-color/
   function generateRandonColor() {
     let randonColor = Math.floor(Math.random()*16777215).toString(16);
@@ -128,12 +138,16 @@ window.onload = function () {
       const nowPaletteQuantity = document.querySelectorAll('.color');
       const color = document.createElement('div');
       color.classList.add('color');
-      if (nowPaletteQuantity.length === 0) {
-        color.style.backgroundColor = 'rgb(0,0,0)';
-        color.classList.add('selected');
-      } else color.style.backgroundColor = generateRandonColor();
-      if(!color.style.backgroundColor) color.style.backgroundColor = generateRandonColor();
-      colorPalette.appendChild(color);
+      if (nowPaletteQuantity.length < 30) {
+        if (nowPaletteQuantity.length === 0) {
+          color.style.backgroundColor = 'rgb(0,0,0)';
+          color.classList.add('selected');
+        } else if (nowPaletteQuantity.length === 1) {
+          color.style.backgroundColor = 'rgb(255,255,255)';
+        } else color.style.backgroundColor = generateRandonColor();
+        if(!color.style.backgroundColor) color.style.backgroundColor = generateRandonColor();
+        colorPalette.appendChild(color);
+      }
     }
   }
 
@@ -144,7 +158,8 @@ window.onload = function () {
     buttonGererateNewColors.addEventListener('click', function() {
       const paletteQauntity = document.querySelector('#palette-quantity');
       const nowPaletteQuantity = document.querySelectorAll('.color');
-      if (paletteQauntity.value ) createColorsPalette(paletteQauntity.value - nowPaletteQuantity.length);
+      if (paletteQauntity.value ) createColorsPalette(paletteQauntity.value);
+      paletteQauntity.value = '';
     });
   }
 
@@ -153,7 +168,7 @@ window.onload = function () {
   selectColor();
   paintPixelWithColorSelected();
   clearBoard();
-  gererateBoardNxN();
   createColorsPalette(colorsPaletteQuantity);
   newColorsPalette();
+  listenerBordGenerate();
 };
