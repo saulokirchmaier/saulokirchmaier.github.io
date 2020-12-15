@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 id="title">Pixel Art</h1>
+  </header>
+  <section id="color-palette">
+    <h2>Paleta de cores</h2>
+  </section>
+  <div>
+    <input type="number" id="palette-quantity" placeholder="Quantidade de cores">
+    <button id="add-colors">Adicionar cores</button>
+    <button id="new-colors">Gerar novas cores</button>
+  </div>
+  <div>
+    <input type="number" id="board-size" placeholder="Digite um nº de 5 a 50" min="1" max="99" maxlength="2">
+    <button id="generate-board" >Gerar novo quadro</button>
+  </div>
+  <button id="clear-board">Limpar quadro</button>
+  <section id="pixel-board"></section>
+  <footer>
+    <p>Feito por Saulo Kirchmaier. <a href="https://github.com/saulokirchmaier" target="_blank"><img src="github.png" alt="github"></a> <a href="https://www.linkedin.com/in/saulokirchmaier/" target="_blank"><img src="linkedin.svg" alt="linkedin"></a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
