@@ -6,7 +6,7 @@ Além dos requisitos obrigatórios adicionei um estilo com CSS e algumas funcion
 
 Resultado final do projeto todo-list:
 
-![Teste da aplicação]()
+![Teste da aplicação](pixels-art.gif)
 
 Você pode testar o projeto [aqui](https://saulokirchmaier.github.io/pixels-art).
 
