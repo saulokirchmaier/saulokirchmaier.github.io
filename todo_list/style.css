@@ -87,3 +87,16 @@ button {
 #salvar-tarefas, #criar-tarefa {
   background-color: #96e278;
 }
+
+footer {
+  bottom: 0;
+  background-color: #fb8570;
+  color: #343a40;
+  padding: 8px;
+  position: fixed;
+  width: 100%;
+}
+
+footer img {
+  height: 24px;
+}
