@@ -1,4 +1,3 @@
-
 // Cria novo elemento li
 function createNewElementList(content, completed) {
   const tasksList = document.getElementById('lista-tarefas');
@@ -32,20 +31,11 @@ function addClassSelected(event) {
   } else taskSelect.classList.add('selected');
 }
 
-// Click no item desejado
-function selectTaskItem() {
-  const tasksList = document.getElementById('lista-tarefas');
-  tasksList.addEventListener('click', addClassSelected);
-}
-
 // Risca task quando clicado 2x
-function taskCompleteCheckAndDescheck() {
-  const tasksList = document.getElementById('lista-tarefas');
-  tasksList.addEventListener('dblclick', function (event) {
+function taskCompleteCheckAndDescheck(event) {
     const taskCompleted = event.target;
     if (taskCompleted.classList.contains('completed')) taskCompleted.classList.remove('completed');
     else taskCompleted.classList.add('completed');
-  });
 }
 
 // Apaga todas as tasks
@@ -177,10 +167,18 @@ function addNewTaskEnterPressed() {
   });
 }
 
+function listener() {
+  const tasksList = document.getElementById('lista-tarefas');
+  tasksList.addEventListener('click', addClassSelected);
+  tasksList.addEventListener('dblclick', taskCompleteCheckAndDescheck);
+  // const clearCompletedButton = document.querySelector('#remover-finalizados');
+  // clearCompletedButton.addEventListener('click', clearCompletedTaskd());
+}
+
 window.onload = function () {
   addTaskButton();
-  selectTaskItem();
-  taskCompleteCheckAndDescheck();
+  // selectTaskItem();
+  // taskCompleteCheckAndDescheck();
   clearAllTasks();
   clearCompletedTaskd();
   saveItensTaskLocalStorage();
@@ -189,4 +187,5 @@ window.onload = function () {
   upTaskPositionInList();
   downTaskPositionInList();
   addNewTaskEnterPressed();
+  listener();
 };
