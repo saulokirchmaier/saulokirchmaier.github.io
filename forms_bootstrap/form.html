@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 6.1</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="text-center text-dark mt-3 mb-3 border-bottom border-2">
+    <h1>Cadastro de currículo</h1>
+  </header>
+
+  <div class="container-sm mx-auto" style="max-width: 1100px; width: 90%;">
+    <form method="get" class="m-3 needs-validation" novalidate>
+      
+      <fieldset class="border-bottom mb-3" id="personal-data">
+        <legend>Dados Pessoais</legend>
+
+        <div class="d-flex flex-sm-row flex-wrap gap-2 justify-content-evenly">
+          <div class="form-floating flex-fill mb-3">
+            <input type="text" class="form-control"  id="name" placeholder="João da Silva" maxlength="40" required>
+            <label for="name" class="form-label">Nome</label>
+            <div class="invalid-feedback">Favor inserir seu nome.</div>
+          </div>
+    
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" maxlength="50" required>
+            <label for="email">Email</label>
+            <div class="invalid-feedback">Favor inserir um e-mail válido.</div>
+          </div>
+          
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="cpf" placeholder="12345678900" maxlength="11" required>
+            <label for="cpf">CPF</label>
+            <div class="invalid-feedback">Favor inserir seu cpf.</div>
+          </div>
+        </div>
+  
+        
+        <div class="d-flex flex-sm-row flex-wrap gap-2 justify-content-evenly">
+          <div class="form-floating flex-fill mb-3">
+            <input type="text" class="form-control" id="adress" placeholder="Av. Itaim, 100" maxlength="40" required>
+            <label for="adress">Endereço</label>
+            <div class="invalid-feedback">Favor inserir seu endereço atual.</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="city" placeholder="Goiania" maxlength="40" required>
+            <label for="city">Cidade</label>
+            <div class="invalid-feedback">Favor selecione seu estado.</div>
+          </div>
+    
+          <div class="form-floating mb-3">
+            <select name="states" class="form-select" id="states" required>
+              <option selected></option>
+            </select>
+            <label for="states">Estado</label>
+          </div>
+        </div>
+  
+        <div class="d-flex flex-sm-row flex-wrap justify-content-evenly align-items-center container-sm mb-3" style="max-width: 600px;">
+          <label for="home-type" class="m-3">Moradia:</label>
+          <div class="form-check">
+            <input 
+              type="radio" 
+              name="home-type" 
+              class="form-check-input"
+              id="house" 
+              value="Casa" 
+              required          
+            >
+            <label class="form-check-label" for="house">
+              Casa
+            </label>
+            <div class="invalid-feedback">Favor selecione uma moradia</div>
+          </div>
+    
+          <div class="form-check">
+            <input 
+              type="radio" 
+              name="home-type" 
+              class="form-check-input"
+              id="apartment" 
+              value="Apartamento" 
+              required
+            >
+            <label class="form-check-label" for="apartment">
+              Apartamento
+            </label>
+            <div class="invalid-feedback">Favor selecione uma moradia</div>
+          </div>
+        </div>
+  
+      </fieldset>
+  
+      <fieldset id="last-job">
+        <legend>Último emprego</legend>
+  
+        <div class="form-floating mb-3">
+          <textarea 
+            class="form-control" 
+            placeholder="Descreva brevemente seu uĺtimo cargo..." 
+            name="resume" 
+            id="resume-text" 
+            cols="30" 
+            rows="5" 
+            maxlength="1000"
+            style="height: 100px"
+            required
+          ></textarea>
+          <label for="resume-text">Resumo do currículo</label>
+          <div class="invalid-feedback">Favor inserir um resumo profissional.</div>
+        </div>
+  
+        <div class="d-flex flex-sm-row flex-wrap gap-2 justify-content-evenly">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="role" id="role" placeholder="Cargo" maxlength="40" required>
+            <label for="role">Cargo</label>
+          <div class="invalid-feedback">Favor inserir seu cargo.</div>
+          </div>
+          
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="start-date" id="start-date" placeholder="20/10/2019" required>
+            <label for="start-date">Data de início</label>
+          <div class="invalid-feedback">Favor selecione a data de início.</div>
+          </div>
+    
+          <div class="form-floating flex-fill mb-3">
+            <input 
+              type="text" 
+              class="form-control" 
+              name="role-description" 
+              id="role-description" 
+              placeholder="Descrição do cargo" 
+              maxlength="500"
+              required
+            >
+            <label for="role-description">Descrição do cargo</label>
+          <div class="invalid-feedback">Favor inserir uma descrição do cargo.</div>
+          </div>
+        </div>
+  
+      </fieldset>
+  
+      <div class="gap-2 d-flex flex-sm-row flex-wrap justify-content-center mb-3">
+        <button type="submit" class="btn btn-success" id="submit">Enviar</button>
+        <button type="reset" class="btn btn-outline-danger">Limpar</button>
+      </div>
+    </form>
+  </div>
+
+  <section class="container-sm resume border-2" style="padding: 0 12px; max-width: 1000px; width: 80%;">
+  </section>
+    
+  <script src="pikaday.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
