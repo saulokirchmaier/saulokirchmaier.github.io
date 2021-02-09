@@ -36,7 +36,7 @@ body {
   border-right: none;
   border-radius: 5px 0 0 5px;
   font-size: 16px;
-  width: 35vw;
+  width: 100%;
 }
 
 .search-section button {
@@ -45,12 +45,10 @@ body {
   border-left: none;
   border-radius: 0 5px 5px 0;
   color: #392F5A;
-  cursor: pointer;
   min-width: 30px;
 }
 
 .cart-icon {
-  cursor: pointer;
   transition: transform .2s;
 }
 
@@ -115,13 +113,7 @@ body {
   flex-direction: column;
   height: auto;
   margin: 5px;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  transition: transform .2s;
   width: 200px;
-}
-
-.item:hover {
-  transform: scale(1.03);
 }
 
 .item .item__price {
@@ -201,7 +193,6 @@ body {
 }
 
 .cart__item {
-  cursor: pointer;
   list-style: none;
 }
 
@@ -209,7 +200,6 @@ body {
   background-color: #F4D06F;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 20px;
   height: 30px;
 }
@@ -252,10 +242,6 @@ footer img {
     height: 15%;
     justify-content: space-evenly;
     padding: 4px;
-  }
-
-  .search-section input {
-    width: 60vw;
   }
 
   .cart-icon i {
