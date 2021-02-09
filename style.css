@@ -56,9 +56,10 @@ main {
 
 /* projetos */
 .projects {
-  display: grid;
-  grid-auto-rows: 250px;
-  gap: 24px;
+  /* display: grid;
+  grid-auto-rows: 250px; */
+  display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   max-width: 95%;
 }
@@ -128,4 +129,19 @@ main {
 
 .top-line {
   border-top: solid 1px rgba(115,180,241, 0.5);
+}
+
+.footer {
+  align-items: center;
+  color: #3a3c6e;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 8px;
+  width: 100%;
+}
+
+footer img {
+  max-height: 24px;
 }

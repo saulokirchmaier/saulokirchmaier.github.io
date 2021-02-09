@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Facebook Page</title>
+</head>
+<body>
+  <section class="top-bar">
+    <div class="facebook-logo-login">
+      <img class="facebook-logo" src="imgs/facebook-logo-1.png">
+  
+      <form class="facebook-login">
+        <div class="form-group">
+          <label for="user-email-phone" id="user-email-phone-label">Email ou telefone</label>
+          <input class="login-input" type="text" id="user-email-phone">
+        </div>
+        <div class="form-group">
+          <label for ="user-password" id = "user-password-label">Senha</label>
+          <input class="login-input" type="password" id = "user-password">
+          <p>Esqueceu a conta?</p>
+        </div>
+        <div class="form-control">
+          <button id="button-login">Entrar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <main class="main-content">
+
+    <div class="left-content">
+      <p id="facebook-slogan">O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</p>
+      <img id="facebook-networking" src="imgs/networking.png" alt="Facebook network">
+    </div>
+
+    <div class = "right-content">
+      <h1>Abra uma conta</h1>
+      <p class = "quick-easy">É rápido e fácil.</p>
+      <form name ="form1" class="form-register">
+
+        <div class="name-lastname">
+          <input class="input-register" id = "nome" type = "text" name = "firstname" placeholder = "Nome" required>
+          <input class="input-register" id = "sobrenome" type = "text" name = "lastname" placeholder = "Sobrenome" required>
+        </div>
+
+        <input class="input-register phone-email" id = "phone-email" type = "text" name = "phone_email" placeholder = "Celular ou email" required>
+
+        <input class="input-register password" id="senha" type="password" name="password" placeholder="Nova senha" required>
+        
+        <label for="data-de-nascimento" class="label-birthdate" id="label-birthdate">Data de nascimento
+        </label>
+        <div>
+          <input class="data-de-nascimento" id="data-de-nascimento" type="text" name="birthdate" placeholder="dd/mm/aaaa" required> 
+          <i class="fas fa-question-circle"></i>
+        </div>
+
+        <div class="gender-section">
+          <label class="label-gender" id="label-gender">Gênero</label>
+          <div class="gender">
+            <input type="radio" value="Feminino" name="gender" id="feminino"required checked>
+            <label for="feminino">Feminino</label>
+
+            <input type="radio" value="Masculino" name="gender" id="masculino" required>
+            <label for="masculino">Masculino</label>
+
+            <input type="radio" value="Personalizado" name="gender" id="personalizado" required>
+            <label for="personalizado">Personalizado</label>
+          </div>
+          <i class="fas fa-question-circle"></i>
+
+          <input class="input-register gender-custom" type="text" id="gender-custom" name="gender-custom" placeholder="Gênero (opcional)" style="display: none;">
+        </div>
+
+        <p class="service-info">Ao clicar em Cadastre-se, você concorda com nossos <strong>Termos</strong>, <strong>Política de Dados</strong> e <strong>Política de Cookies</strong>. Você pode receber notificações por SMS e pode cancelar isso quando quiser.</p>
+
+        <button class="facebook-register" id = "facebook-register" type="submit">Cadastre-se</button>
+
+        <p class="pages-info"><strong>Criar uma Página</strong> para uma celebridade,banda ou empresa.</p>
+
+        </form>
+      </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

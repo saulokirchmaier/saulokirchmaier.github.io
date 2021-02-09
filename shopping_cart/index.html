@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mega Eletrônicos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="top-bar">
+      <div class="logo">
+        <h1>Mega Eletrônicos</h1>
+        <h4>Os melhores preços do Brasil!</h4>
+      </div>
+      <div class="search-section">
+        <input type="text" placeholder=" Computador" class="search-input">
+        <button class="search-button"><i class="fas fa-search"></i></button>
+      </div>
+      <span class="cart-icon">
+        <p class="cart-quantity" style="visibility: hidden"></p>
+        <i class="fas fa-shopping-cart"></i>
+      </span>
+    </header>
+
+    <img class="main-image" src="https://source.unsplash.com/WiONHd_zYI4/1600x450" alt="Foto de computador">
+
+    <h4 class="product-search">Você buscou por: <span></span></h4>
+
+    <section class="container">
+      <section class="items"></section>
+      <div class="cart-space" style="display: none">
+        <section class="cart">
+          <span class="cart__title">Carrinho de compras</span>
+          <ul class="cart__items"></ul>
+          <button class="empty-cart">Esvaziar carrinho</button>
+        </section>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Feito por Saulo Kirchmaier.</p>
+      <a href="https://github.com/saulokirchmaier" target="_blank"><img src="github.png" alt="github"></a>
+      <a href="https://www.linkedin.com/in/saulokirchmaier/" target="_blank"><img src="linkedin.svg" alt="linkedin"></a>
+    </footer>
+  </body>
+</html>
